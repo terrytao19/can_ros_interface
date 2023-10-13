@@ -1,0 +1,4 @@
+float32 AS_trq_bl
+float32 AS_trq_br
+float32 AS_trq_fl
+float32 AS_trq_fr
