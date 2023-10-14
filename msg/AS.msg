@@ -1,0 +1,9 @@
+float32 AS_trq_bl
+float32 AS_trq_br
+float32 AS_trq_fl
+float32 AS_trq_fr
+float32 AS_steer_ang
+bool AS_active
+uint8 AS_mission
+bool AS_R2D
+uint8 ASSI
