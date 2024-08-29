@@ -6,6 +6,7 @@ import os
 import cantools
 import rospkg
 from can_ros_interface.msg import AS
+from can_ros_interface.msg import MR23_CAN
 
 '''
 rostopic pub -r 100 /AS_out can_ros_interface/AS '{AS_trq_bl: 1, AS_trq_br: 1, AS_trq_fl: 1, AS_trq_fr: 1, AS_steer_ang: 0, AS_active: 1, AS_mission: 0, AS_R2D: 1, ASSI: 0}'
@@ -36,7 +37,6 @@ AS_Setpt_trq_msg = db.get_message_by_name('AS_Setpt_trq')
 AS_Setpt_steer_msg = db.get_message_by_name('AS_Setpt_steer')
 
 DV_system_status_msg = db.get_message_by_name('DV_system_status')
-
 
 def callback(data):
   
@@ -72,6 +72,45 @@ def callback(data):
   except can.CanError:
       print(f"Message on {bus.channel_info} NOT sent")
 
+def extract_signal_value(data, start_bit, length, factor, offset):
+    # Extract the raw signal value from the CAN data
+    raw_value = int.from_bytes(data, byteorder='little', signed=True)
+
+    # Shift and mask to get the signal value
+    signal_mask = (1 << length) - 1
+    signal_value = (raw_value >> start_bit) & signal_mask
+
+    # Apply factor and offset to get the physical value
+    physical_value = signal_value * factor + offset
+
+    return physical_value
+
+def can_to_ros():
+    # Set up CAN bus interface
+    # bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate=500000)
+    # Main loop to receive and publish CAN messages
+   # message = bus.recv() # receive can message
+    can_data = MR23_CAN() #using bus
+    print("hello")
+    with can.Bus() as bus:
+        for msg in bus:
+            print(msg.data)
+    # if bus.recv() is not None:
+    #     print("Here")
+    #     #fix the id, it is under AMK_TargetTorque
+    #     if message.arbitration_id == 388 or 389 or 392 or 393:  # ID for AS_Setpt_trq message
+    #         can_data.header.stamp = rospy.Time.now()
+    #         print(message.data[388])
+    #         print(message.data[0])
+    #         print((message.data[6] << 8 | message.data[7]) * 0.0098)
+    #         signal_value = extract_signal_value(msg.data, start_bit=48, length=16, factor=0.0098, offset=0.0)
+    #         print("JELLO")
+    #         # can_data.AS_trq_fr = (message.data[6] << 8 | message.data[7]) * 0.0098
+    #         # can_data.AS_trq_fl = (message.data[4] << 8 | message.data[5]) * 0.0098
+    #         # can_data.AS_trq_br = (message.data[2] << 8 | message.data[3]) * 0.0098
+    #         # can_data.AS_trq_bl = (message.data[0] << 8 | message.data[1]) * 0.0098
+    #         pub_trq.publish(can_data) 
+        ros.spinOnce()
   
 
 
@@ -83,8 +122,11 @@ if __name__ == '__main__':
 
   # AS is the message type
   rospy.Subscriber('AS_out', AS, callback)
-
-  rospy.spin()
-
+  
+  # Create ROS publisher
+  pub = rospy.Publisher('MR23_CAN', MR23_CAN, queue_size=20)
+  
+  while not rospy.is_shutdown():
+    can_to_ros()
 
 

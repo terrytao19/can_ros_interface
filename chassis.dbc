@@ -1,0 +1,802 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: 
+
+
+BO_ 16 R_Sns_1: 8 Vector__XXX
+ SG_ R_Roll_Damper : 48|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+ SG_ R_Accel_Z : 32|16@1- (0.000244,0.0) [-7.995392|7.9951479999999995] "g" Vector__XXX
+ SG_ R_Accel_Y : 16|16@1- (0.000244,0.0) [-7.995392|7.9951479999999995] "g" Vector__XXX
+ SG_ R_Accel_X : 0|16@1- (0.000244,0.0) [-7.995392|7.9951479999999995] "g" Vector__XXX
+
+BO_ 17 R_Sns_2: 8 Vector__XXX
+ SG_ R_Heave_Damper : 48|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+ SG_ R_Gyro_Z : 32|16@1- (0.0175,0.0) [-573.44|573.4225] "dps" Vector__XXX
+ SG_ R_Gyro_Y : 16|16@1- (0.0175,0.0) [-573.44|573.4225] "dps" Vector__XXX
+ SG_ R_Gyro_X : 0|16@1- (0.0175,0.0) [-573.44|573.4225] "dps" Vector__XXX
+
+BO_ 18 R_Sns_3: 8 Vector__XXX
+ SG_ R_Aux : 48|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+ SG_ RR_Brake_Temp : 36|12@1+ (1.0,0.0) [0.0|4095.0] "Counts" Vector__XXX
+ SG_ RL_Brake_Temp : 24|12@1+ (1.0,0.0) [0.0|4095.0] "Counts" Vector__XXX
+ SG_ LV_Batt_Current : 12|12@1+ (0.0179487179487179,0.0) [0.0|73.4999999999998] "A" Vector__XXX
+ SG_ LV_Batt_Voltage : 0|12@1+ (0.00446886446886446,0.0) [0.0|18.29999999999996] "V" Vector__XXX
+
+BO_ 19 R_Sns_4: 5 Vector__XXX
+ SG_ Lap_Trigger : 32|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ L_Rad_in : 24|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ R_Rad_in : 16|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ L_Rad_out : 8|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ R_Rad_out : 0|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+
+BO_ 20 R_Current: 8 Vector__XXX
+ SG_ Lap_Trigger_Fault : 60|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Sensors_Fault : 59|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Brakelight_Fault : 58|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Telem_Fault : 57|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ M110_Fault : 56|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Accum_Fault : 55|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ DRS_Fault : 54|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Ptrain_Pump_Fault : 53|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Motor_Pump_Fault : 52|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ L_Fan_Fault : 51|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ R_Fan_Fault : 50|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ F_MC_Fault : 49|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ R_MC_Fault : 48|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ F_MC : 40|8@1+ (0.0392156862745098,0.0) [0.0|10.0] "A" Vector__XXX
+ SG_ R_MC : 32|8@1+ (0.0392156862745098,0.0) [0.0|10.0] "A" Vector__XXX
+ SG_ Motor_Pump : 24|8@1+ (0.0392156862745098,0.0) [0.0|10.0] "A" Vector__XXX
+ SG_ Ptrain_Pump : 16|8@1+ (0.0392156862745098,0.0) [0.0|10.0] "A" Vector__XXX
+ SG_ L_Fan : 8|8@1+ (0.0392156862745098,0.0) [0.0|10.0] "A" Vector__XXX
+ SG_ R_Fan : 0|8@1+ (0.0392156862745098,0.0) [0.0|10.0] "A" Vector__XXX
+
+BO_ 21 R_IMU_CAL: 1 Vector__XXX
+ SG_ Gyro : 2|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Accel_Body : 1|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Accel_World : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 22 R_CTMR_CAL: 6 Vector__XXX
+ SG_ Motor_Pump_CTMR : 40|8@1+ (1.0,0.0) [0.0|255.0] "nF" Vector__XXX
+ SG_ Ptrain_Pump_CTMR : 32|8@1+ (1.0,0.0) [0.0|255.0] "nF" Vector__XXX
+ SG_ L_Fan_CTMR : 24|8@1+ (1.0,0.0) [0.0|255.0] "nF" Vector__XXX
+ SG_ R_Fan_CTMR : 16|8@1+ (1.0,0.0) [0.0|255.0] "nF" Vector__XXX
+ SG_ F_MC_CTMR : 8|8@1+ (1.0,0.0) [0.0|255.0] "nF" Vector__XXX
+ SG_ R_MC_CTMR : 0|8@1+ (1.0,0.0) [0.0|255.0] "nF" Vector__XXX
+
+BO_ 24 LV_Pwr_Override: 4 Vector__XXX
+ SG_ override_enable : 30|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ F_Sensors_PWR : 29|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Steering_Wheel_PWR : 28|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ F_Aux_PWR : 27|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Lap_Trigger_PWR : 26|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Dash_PWR : 25|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ BSPD_PWR : 24|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ R_Sensors_PWR : 23|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Brakelight_PWR : 22|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Telem_PWR : 21|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ M110_PWR : 20|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Accum_PWR : 19|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ DRS_PWR : 18|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Ptrain_Pump_PWR : 17|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Motor_Pump_PWR : 16|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ L_Fan_PWR : 15|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ R_Fan_PWR : 14|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ F_MC_PWR : 13|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ R_MC_PWR : 12|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ DRS_PWM_Override : 0|12@1+ (1.0,0.0) [0.0|4095.0] "us" Vector__XXX
+
+BO_ 25 LV_Pwr_Ctrl: 4 Vector__XXX
+ SG_ F_MC_PWR : 18|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ R_MC_PWR : 17|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Ptrain_Pump_PWR : 16|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Motor_Pump_PWR : 15|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ L_FAN_PWR : 14|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ R_FAN_PWR : 13|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Brakelight_PWR : 12|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ DRS_PWM : 0|12@1+ (1.0,0.0) [0.0|4095.0] "us" Vector__XXX
+
+BO_ 32 F_Sns_1: 8 Vector__XXX
+ SG_ F_Roll_Damper : 48|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+ SG_ F_Accel_Z : 32|16@1- (0.000244,0.0) [-7.995392|7.9951479999999995] "g" Vector__XXX
+ SG_ F_Accel_Y : 16|16@1- (0.000244,0.0) [-7.995392|7.9951479999999995] "g" Vector__XXX
+ SG_ F_Accel_X : 0|16@1- (0.000244,0.0) [-7.995392|7.9951479999999995] "g" Vector__XXX
+
+BO_ 33 F_Sns_2: 8 Vector__XXX
+ SG_ F_Heave_Damper : 48|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+ SG_ F_Gyro_Z : 32|16@1- (0.0175,0.0) [-573.44|573.4225] "dps" Vector__XXX
+ SG_ F_Gyro_Y : 16|16@1- (0.0175,0.0) [-573.44|573.4225] "dps" Vector__XXX
+ SG_ F_Gyro_X : 0|16@1- (0.0175,0.0) [-573.44|573.4225] "dps" Vector__XXX
+
+BO_ 34 F_Sns_3: 8 Vector__XXX
+ SG_ FR_Brake_Temp : 39|12@1+ (1.0,0.0) [0.0|4095.0] "Counts" Vector__XXX
+ SG_ FL_Brake_Temp : 27|12@1+ (1.0,0.0) [0.0|4095.0] "Counts" Vector__XXX
+ SG_ Ptrain_Pump_Switch : 26|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Motor_Pump_Switch : 25|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Fan_Switch : 24|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Steering_Pot : 12|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+ SG_ F_Aux : 0|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+
+BO_ 36 F_Current: 1 Vector__XXX
+ SG_ F_Sensors_Fault : 5|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Wheel_Fault : 4|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ F_Aux_Fault : 3|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Dash_Fault : 2|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ BSPD_Fault : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 37 F_IMU_CAL: 1 Vector__XXX
+ SG_ Gyro : 2|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Accel_Body : 1|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Accel_World : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 118 Dash_1: 3 Vector__XXX
+ SG_ dial_regen : 20|4@1+ (1.0,0.0) [0.0|15.0] "" Vector__XXX
+ SG_ dial_tv : 16|4@1+ (1.0,0.0) [0.0|15.0] "" Vector__XXX
+ SG_ dial_tc : 12|4@1+ (1.0,0.0) [0.0|15.0] "" Vector__XXX
+ SG_ dial_mode : 8|4@1+ (1.0,0.0) [0.0|15.0] "" Vector__XXX
+ SG_ btn_page : 6|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ btn_drs : 5|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ btn_wet : 4|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ btn_reset : 3|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ btn_launch : 2|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ btn_disable : 1|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ btn_enable : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 119 Dash_2: 8 Vector__XXX
+ SG_ RL_Inverter_Temp : 56|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ RR_Inverter_Temp : 48|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ FL_Inverter_Temp : 40|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ FR_Inverter_Temp : 32|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ RL_Motor_Temp : 24|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ RR_Motor_Temp : 16|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ FL_Motor_Temp : 8|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ FR_Motor_Temp : 0|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+
+BO_ 120 Dash_3: 8 Vector__XXX
+ SG_ Regen : 56|8@1+ (1.0,0.0) [0.0|255.0] "%" Vector__XXX
+ SG_ Lap_Number : 48|8@1+ (1.0,0.0) [0.0|255.0] "" Vector__XXX
+ SG_ Lap_Time : 32|16@1+ (0.01,0.0) [0.0|655.35] "s" Vector__XXX
+ SG_ Lap_Delta : 16|16@1- (0.01,0.0) [-327.68|327.67] "s" Vector__XXX
+ SG_ Vehicle_Speed : 0|16@1+ (0.1,0.0) [0.0|6553.5] "mph" Vector__XXX
+
+BO_ 130 Dash_4: 8 Vector__XXX
+ SG_ TSAL_Green : 52|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Enable_Status : 51|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Reset : 50|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ IMD_Indicator : 49|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ AMS_Indicator : 48|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Brake_Bias : 40|8@1+ (1.0,0.0) [0.0|255.0] "" Vector__XXX
+ SG_ SOC : 32|8@1+ (1.0,0.0) [0.0|255.0] "%" Vector__XXX
+ SG_ Pack_Temp : 24|8@1+ (1.0,0.0) [0.0|255.0] "C" Vector__XXX
+ SG_ HV_Batt_V : 8|16@1+ (0.01,0.0) [0.0|655.35] "V" Vector__XXX
+ SG_ DCDC_On : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 133 Device_Fault: 2 Vector__XXX
+ SG_ Pack_OV_Fault : 9|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Pack_OT_Fault : 8|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Pack_UV_Fault : 7|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ LMC_Fault : 6|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ RMC_Fault : 5|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ AMS_Fault : 4|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ SW_Fault : 3|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ RM_C_Fault : 2|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ FM_C_Fault : 1|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ FM_PT_Fault : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 256 GPS_POS: 8 Vector__XXX
+ SG_ Lon : 32|32@1- (1e-07,0.0) [-214.7483648|214.7483647] "deg" Vector__XXX
+ SG_ Lat : 0|32@1- (1e-07,0.0) [-214.7483648|214.7483647] "deg" Vector__XXX
+
+BO_ 257 GPS_VEL: 8 Vector__XXX
+ SG_ Heading : 32|32@1- (1e-05,0.0) [-21474.83648|21474.836470000002] "deg" Vector__XXX
+ SG_ Speed : 0|32@1+ (0.02236936,0.0) [0.0|96075669.61008121] "mph" Vector__XXX
+
+BO_ 258 GPS_TIM: 8 Vector__XXX
+ SG_ Fix : 56|8@1+ (1.0,0.0) [0.0|255.0] "" Vector__XXX
+ SG_ Sec : 48|8@1+ (1.0,0.0) [0.0|255.0] "s" Vector__XXX
+ SG_ Min : 40|8@1+ (1.0,0.0) [0.0|255.0] "min" Vector__XXX
+ SG_ Hour : 32|8@1+ (1.0,0.0) [0.0|255.0] "h" Vector__XXX
+ SG_ Day : 24|8@1+ (1.0,0.0) [0.0|255.0] "d" Vector__XXX
+ SG_ Month : 16|8@1+ (1.0,0.0) [0.0|255.0] "month" Vector__XXX
+ SG_ Year : 0|16@1+ (1.0,0.0) [0.0|65535.0] "y" Vector__XXX
+
+BO_ 261 Flow_Sensor: 4 Vector__XXX
+ SG_ Velocity_Y : 16|16@1- (0.02236936,0.0) [-732.99918848|732.9768191200001] "mph" Vector__XXX
+ SG_ Velocity_X : 0|16@1- (0.02236936,0.0) [-732.99918848|732.9768191200001] "mph" Vector__XXX
+
+BO_ 259 Telem_Time: 4 Vector__XXX
+ SG_ Year : 24|8@1+ (1.0,0.0) [0.0|255.0] "" Vector__XXX
+ SG_ Month : 18|6@1+ (1.0,0.0) [0.0|63.0] "" Vector__XXX
+ SG_ Day : 12|6@1+ (1.0,0.0) [0.0|63.0] "" Vector__XXX
+ SG_ Hour : 6|6@1+ (1.0,0.0) [0.0|63.0] "" Vector__XXX
+ SG_ Min : 0|6@1+ (1.0,0.0) [0.0|63.0] "" Vector__XXX
+
+BO_ 1224 LF_IRTS_Brake_5: 2 Vector__XXX
+ SG_ LF_Sensor_Temp : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1229 RF_IRTS_Brake_5: 2 Vector__XXX
+ SG_ RF_Sensor_Temp : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1239 RR_IRTS_Brake_5: 2 Vector__XXX
+ SG_ RR_Sensor_Temp : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1234 LR_IRTS_Brake_5: 2 Vector__XXX
+ SG_ LR_Sensor_Temp : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1220 LF_IRTS_Brake_1: 8 Vector__XXX
+ SG_ LF_Rotor_Temp_04 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_03 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_02 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_01 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1221 LF_IRTS_Brake_2: 8 Vector__XXX
+ SG_ LF_Rotor_Temp_08 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_07 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_06 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_05 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1222 LF_IRTS_Brake_3: 8 Vector__XXX
+ SG_ LF_Rotor_Temp_12 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_11 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_10 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_09 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1223 LF_IRTS_Brake_4: 8 Vector__XXX
+ SG_ LF_Rotor_Temp_16 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_15 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_14 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Rotor_Temp_13 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1225 RF_IRTS_Brake_1: 8 Vector__XXX
+ SG_ RF_Rotor_Temp_04 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_03 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_02 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_01 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1226 RF_IRTS_Brake_2: 8 Vector__XXX
+ SG_ RF_Rotor_Temp_08 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_07 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_06 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_05 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1227 RF_IRTS_Brake_3: 8 Vector__XXX
+ SG_ RF_Rotor_Temp_12 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_11 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_10 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_09 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1228 RF_IRTS_Brake_4: 8 Vector__XXX
+ SG_ RF_Rotor_Temp_16 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_15 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_14 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Rotor_Temp_13 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1230 LR_IRTS_Brake_1: 8 Vector__XXX
+ SG_ LR_Rotor_Temp_04 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_03 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_02 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_01 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1231 LR_IRTS_Brake_2: 8 Vector__XXX
+ SG_ LR_Rotor_Temp_08 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_07 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_06 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_05 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1232 LR_IRTS_Brake_3: 8 Vector__XXX
+ SG_ LR_Rotor_Temp_12 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_11 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_10 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_09 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1233 LR_IRTS_Brake_4: 8 Vector__XXX
+ SG_ LR_Rotor_Temp_16 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_15 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_14 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Rotor_Temp_13 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1235 RR_IRTS_Brake_1: 8 Vector__XXX
+ SG_ RR_Rotor_Temp_04 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_03 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_02 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_01 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1236 RR_IRTS_Brake_2: 8 Vector__XXX
+ SG_ RR_Rotor_Temp_08 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_07 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_06 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_05 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1237 RR_IRTS_Brake_3: 8 Vector__XXX
+ SG_ RR_Rotor_Temp_12 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_11 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_10 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_09 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1238 RR_IRTS_Brake_4: 8 Vector__XXX
+ SG_ RR_Rotor_Temp_16 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_15 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_14 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Rotor_Temp_13 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1200 LF_IRTS_Tire_1: 8 Vector__XXX
+ SG_ LF_Tire_Temp_04 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_03 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_02 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_01 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1201 LF_IRTS_Tire_2: 8 Vector__XXX
+ SG_ LF_Tire_Temp_08 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_07 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_06 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_05 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1202 LF_IRTS_Tire_3: 8 Vector__XXX
+ SG_ LF_Tire_Temp_12 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_11 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_10 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_09 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1203 LF_IRTS_Tire_4: 8 Vector__XXX
+ SG_ LF_Tire_Temp_16 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_15 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_14 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LF_Tire_Temp_13 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1204 RF_IRTS_Tire_1: 8 Vector__XXX
+ SG_ RF_Tire_Temp_04 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_03 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_02 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_01 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1205 RF_IRTS_Tire_2: 8 Vector__XXX
+ SG_ RF_Tire_Temp_08 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_07 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_06 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_05 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1206 RF_IRTS_Tire_3: 8 Vector__XXX
+ SG_ RF_Tire_Temp_12 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_11 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_10 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_09 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1207 RF_IRTS_Tire_4: 8 Vector__XXX
+ SG_ RF_Tire_Temp_16 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_15 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_14 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RF_Tire_Temp_13 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1208 LR_IRTS_Tire_1: 8 Vector__XXX
+ SG_ LR_Tire_Temp_04 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_03 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_02 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_01 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1209 LR_IRTS_Tire_2: 8 Vector__XXX
+ SG_ LR_Tire_Temp_08 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_07 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_06 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_05 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1210 LR_IRTS_Tire_3: 8 Vector__XXX
+ SG_ LR_Tire_Temp_12 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_11 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_10 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_09 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1211 LR_IRTS_Tire_4: 8 Vector__XXX
+ SG_ LR_Tire_Temp_16 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_15 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_14 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ LR_Tire_Temp_13 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1212 RR_IRTS_Tire_1: 8 Vector__XXX
+ SG_ RR_Tire_Temp_04 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_03 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_02 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_01 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1213 RR_IRTS_Tire_2: 8 Vector__XXX
+ SG_ RR_Tire_Temp_08 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_07 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_06 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_05 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1214 RR_IRTS_Tire_3: 8 Vector__XXX
+ SG_ RR_Tire_Temp_12 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_11 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_10 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_09 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 1215 RR_IRTS_Tire_4: 8 Vector__XXX
+ SG_ RR_Tire_Temp_16 : 55|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_15 : 39|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_14 : 23|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+ SG_ RR_Tire_Temp_13 : 7|16@0+ (0.1,-100) [-100|6453.5] "C" Vector__XXX
+
+BO_ 288 Pedal_Torque_Mapping: 8 Vector__XXX
+ SG_ FR_Torque_Out : 50|10@1- (0.1,0.0) [-51.2|51.1] "Nm" Vector__XXX
+ SG_ FL_Torque_Out : 40|10@1- (0.1,0.0) [-51.2|51.1] "Nm" Vector__XXX
+ SG_ RR_Torque_Out : 30|10@1- (0.1,0.0) [-51.2|51.1] "Nm" Vector__XXX
+ SG_ RL_Torque_Out : 20|10@1- (0.1,0.0) [-51.2|51.1] "Nm" Vector__XXX
+ SG_ Total_Torque : 8|12@1- (0.1,0.0) [-204.8|204.70000000000002] "Nm" Vector__XXX
+ SG_ APS_Percentage : 0|8@1+ (1.0,0.0) [0.0|255.0] "%" Vector__XXX
+
+BO_ 289 Speed_Estimation: 8 Vector__XXX
+ SG_ FL_Confidence : 54|6@1+ (0.02,0.0) [0.0|1.26] "" Vector__XXX
+ SG_ FR_Confidence : 48|6@1+ (0.02,0.0) [0.0|1.26] "" Vector__XXX
+ SG_ RL_Confidence : 42|6@1+ (0.02,0.0) [0.0|1.26] "" Vector__XXX
+ SG_ RR_Confidence : 36|6@1+ (0.02,0.0) [0.0|1.26] "" Vector__XXX
+ SG_ gpsConfidence : 30|6@1+ (0.02,0.0) [0.0|1.26] "" Vector__XXX
+ SG_ accelConfidence : 24|6@1+ (0.02,0.0) [0.0|1.26] "" Vector__XXX
+ SG_ vehicleSpeed_mph : 12|12@1+ (0.025,0.0) [0.0|102.375] "mph" Vector__XXX
+ SG_ vehicleSpeed_mps : 0|12@1+ (0.01,0.0) [0.0|40.95] "m/s" Vector__XXX
+
+BO_ 290 Wheel_Speeds: 8 Vector__XXX
+ SG_ FL_CGSpeed : 36|12@1+ (0.01,0.0) [0.0|40.95] "m/s" Vector__XXX
+ SG_ FR_CGSPeed : 24|12@1+ (0.01,0.0) [0.0|40.95] "m/s" Vector__XXX
+ SG_ RL_CGSPeed : 12|12@1+ (0.01,0.0) [0.0|40.95] "m/s" Vector__XXX
+ SG_ RR_CGSpeed : 0|12@1+ (0.01,0.0) [0.0|40.95] "m/s" Vector__XXX
+
+BO_ 291 Wheel_Slips: 8 Vector__XXX
+ SG_ fourWheelSlip : 60|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ FL_Slip : 45|15@1- (0.01,0.0) [-163.84|163.83] "" Vector__XXX
+ SG_ FR_Slip : 30|15@1- (0.01,0.0) [-163.84|163.83] "" Vector__XXX
+ SG_ RL_Slip : 15|15@1- (0.01,0.0) [-163.84|163.83] "" Vector__XXX
+ SG_ RR_Slip : 0|15@1- (0.01,0.0) [-163.84|163.83] "" Vector__XXX
+
+BO_ 292 Vehicle_Inertial: 8 Vector__XXX
+ SG_ yawMoment : 56|8@1- (0.5,0.0) [-64.0|63.5] "Nm" Vector__XXX
+ SG_ Distance_Traveled : 41|15@1+ (0.001,0.0) [0.0|32.767] "km" Vector__XXX
+ SG_ Yaw : 26|15@1- (0.01,0.0) [-163.84|163.83] "deg/s" Vector__XXX
+ SG_ Lat : 13|13@1- (0.001,0.0) [-4.096|4.095] "g" Vector__XXX
+ SG_ Lon : 0|13@1- (0.001,0.0) [-4.096|4.095] "g" Vector__XXX
+
+BO_ 293 Torque_Vectoring_1: 8 Vector__XXX
+ SG_ Yaw_latSplit : 53|11@1+ (0.01,0.0) [0.0|20.47] "Nm" Vector__XXX
+ SG_ Yaw_surfaceMaxYaw : 46|7@1+ (1.0,0.0) [0.0|127.0] "deg/s" Vector__XXX
+ SG_ Yaw_driverReqYaw : 39|7@1+ (1.0,0.0) [0.0|127.0] "deg/s" Vector__XXX
+ SG_ FF_lonSplit : 27|12@1- (0.01,0.0) [-20.48|20.47] "Nm" Vector__XXX
+ SG_ FF_latSplit : 16|11@1+ (0.01,0.0) [0.0|20.47] "Nm" Vector__XXX
+ SG_ minLonTQSplitAllowed : 8|8@1+ (0.1,0.0) [0.0|25.5] "Nm" Vector__XXX
+ SG_ minLatTQSplitAllowed : 0|8@1+ (0.1,0.0) [0.0|25.5] "Nm" Vector__XXX
+
+BO_ 294 Torque_Vectoring_2: 8 Vector__XXX
+ SG_ active : 60|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ FL_TV_torqueOut : 48|12@1- (0.01,0.53) [-19.95|21.0] "Nm" Vector__XXX
+ SG_ FR_TV_torqueOut : 36|12@1- (0.01,0.53) [-19.95|21.0] "Nm" Vector__XXX
+ SG_ RL_TV_torqueOut : 24|12@1- (0.01,0.53) [-19.95|21.0] "Nm" Vector__XXX
+ SG_ RR_TV_torqueOut : 12|12@1- (0.01,0.53) [-19.95|21.0] "Nm" Vector__XXX
+ SG_ Yaw_lonSplit : 0|12@1- (0.01,0.0) [-20.48|20.47] "Nm" Vector__XXX
+
+BO_ 295 Debug_Torque_Vectoring: 8 Vector__XXX
+ SG_ Yaw_Error : 44|7@1- (0.5,0.0) [-32.0|31.5] "deg/s" Vector__XXX
+ SG_ FF_latSplitDeratePCT : 37|7@1+ (0.01,0.0) [0.0|1.27] "Nm" Vector__XXX
+ SG_ FF_dynamicRearBiasPCT : 30|7@1+ (0.01,0.0) [0.0|1.27] "Nm" Vector__XXX
+ SG_ yawControlAllocationPCT : 22|8@1- (0.01,0.0) [-1.28|1.27] "Nm" Vector__XXX
+ SG_ pYawControl : 11|11@1+ (0.01,0.0) [0.0|20.47] "Nm" Vector__XXX
+ SG_ iYawControl : 0|11@1+ (0.01,0.0) [0.0|20.47] "Nm" Vector__XXX
+
+BO_ 296 Regen: 8 Vector__XXX
+ SG_ maxEffTQTarget : 50|13@1+ (0.1,0.0) [0.0|819.1] "Nm" Vector__XXX
+ SG_ brakePressureTQ : 37|13@1+ (0.01,0.0) [0.0|81.91] "Nm" Vector__XXX
+ SG_ driverPedalTQReq : 24|13@1+ (0.01,0.0) [0.0|81.91] "Nm" Vector__XXX
+ SG_ rawOffPedalTQ : 14|10@1+ (0.1,0.0) [0.0|102.30000000000001] "Nm" Vector__XXX
+ SG_ regenTorque : 1|13@1+ (0.025,-84.0) [-84.0|120.775] "Nm" Vector__XXX
+ SG_ active : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 297 Debug_Regen: 8 Vector__XXX
+ SG_ brakePressureTQ_PCT : 15|7@1+ (0.01,0.0) [0.0|1.27] "%" Vector__XXX
+ SG_ recoveryAllowed : 14|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ rawCornerDeratePCT : 7|7@1+ (0.01,0.0) [0.0|1.27] "%" Vector__XXX
+ SG_ cornerDeratePCT : 0|7@1+ (0.01,0.0) [0.0|1.27] "%" Vector__XXX
+
+BO_ 304 Launch_Control: 8 Vector__XXX
+ SG_ launchState : 62|2@1+ (1.0,0.0) [0.0|3.0] "" Vector__XXX
+ SG_ learnFR_Slip : 50|12@1- (0.01,0.0) [-20.48|20.47] "" Vector__XXX
+ SG_ learnFL_Slip : 38|12@1- (0.01,0.0) [-20.48|20.47] "" Vector__XXX
+ SG_ Final_Mu : 27|11@1+ (0.001,0.0) [0.0|2.047] "" Vector__XXX
+ SG_ Mu_Ramp : 20|7@1+ (0.01,0.0) [0.0|1.27] "" Vector__XXX
+ SG_ OL_frontTQ : 10|10@1+ (0.05,0.0) [0.0|51.150000000000006] "Nm" Vector__XXX
+ SG_ OL_rearTQ : 0|10@1+ (0.05,0.0) [0.0|51.150000000000006] "Nm" Vector__XXX
+
+BO_ 305 Current_Control: 8 Vector__XXX
+ SG_ CurrentLimit : 42|11@1+ (0.1,0.0) [0.0|204.70000000000002] "" Vector__XXX
+ SG_ Electrical_Allowed_power : 32|10@1+ (100.0,0.0) [0.0|102300.0] "" Vector__XXX
+ SG_ Mech_Allowed_Power : 22|10@1+ (100.0,0.0) [0.0|102300.0] "" Vector__XXX
+ SG_ FF_TQ_Limit : 12|10@1+ (0.1,0.0) [0.0|102.30000000000001] "" Vector__XXX
+ SG_ Final_TQ_Limit : 2|10@1+ (0.1,0.0) [0.0|102.30000000000001] "" Vector__XXX
+ SG_ OverCurrent_Flag : 1|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ CurrentControl_Active : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 306 HV_Data: 8 Vector__XXX
+ SG_ Measured_Efficiency : 51|7@1+ (0.01,0.0) [0.0|1.27] "" Vector__XXX
+ SG_ OpenLoop_Efficiency : 44|7@1+ (0.01,0.0) [0.0|1.27] "" Vector__XXX
+ SG_ Cell_CurrLim : 33|11@1+ (0.1,0.0) [0.0|204.70000000000002] "Amps" Vector__XXX
+ SG_ OverVolt_CurrLim : 22|11@1+ (0.1,0.0) [0.0|204.70000000000002] "Amps" Vector__XXX
+ SG_ UnderVolt_CurrLim : 11|11@1+ (0.1,0.0) [0.0|204.70000000000002] "Amps" Vector__XXX
+ SG_ Power_CurrLim : 0|11@1+ (0.1,0.0) [0.0|204.70000000000002] "Amps" Vector__XXX
+
+BO_ 307 Mode_Selection: 8 Vector__XXX
+ SG_ Regen_Mode : 7|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Enable_ABS : 6|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Enable_TC : 5|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Enable_TV : 4|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Enable_Regen : 3|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Enable_LC : 2|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Enable_CC : 1|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Enable_PC : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 308 Torque_Limits: 8 Vector__XXX
+ SG_ FL_fieldWeakeningTorque : 56|8@1- (0.25,0.0) [-32.0|31.75] "Nm" Vector__XXX
+ SG_ FR_fieldWeakeningTorque : 48|8@1- (0.25,0.0) [-32.0|31.75] "Nm" Vector__XXX
+ SG_ RL_fieldWeakeningTorque : 40|8@1- (0.25,0.0) [-32.0|31.75] "Nm" Vector__XXX
+ SG_ RR_fieldWeakeningTorque : 32|8@1- (0.25,0.0) [-32.0|31.75] "Nm" Vector__XXX
+ SG_ FL_actuatedTorque : 24|8@1- (0.25,0.0) [-32.0|31.75] "Nm" Vector__XXX
+ SG_ FR_actuatedTorque : 16|8@1- (0.25,0.0) [-32.0|31.75] "Nm" Vector__XXX
+ SG_ RL_actuatedTorque : 8|8@1- (0.25,0.0) [-32.0|31.75] "Nm" Vector__XXX
+ SG_ RR_actuatedTorque : 0|8@1- (0.25,0.0) [-32.0|31.75] "Nm" Vector__XXX
+
+BO_ 309 Driver_Inputs: 8 Vector__XXX
+ SG_ avgBrakePressure : 40|10@1+ (1.0,0.0) [0.0|1023.0] "psi" Vector__XXX
+ SG_ brakeBias : 33|7@1+ (0.01,0.0) [0.0|1.27] "%" Vector__XXX
+ SG_ counterSteerDetection : 32|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ FR_roadWheelAngle : 22|10@1- (0.1,0.0) [-51.2|51.1] "deg" Vector__XXX
+ SG_ FL_roadWheelAngle : 12|10@1- (0.1,0.0) [-51.2|51.1] "deg" Vector__XXX
+ SG_ steeringAngle : 1|11@1- (0.1,0.0) [-102.4|102.30000000000001] "deg" Vector__XXX
+ SG_ cornerDirection : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 310 Normal_Force: 8 Vector__XXX
+ SG_ LLTD : 56|7@1+ (0.01,0.0) [0.0|1.27] "%" Vector__XXX
+ SG_ lonLoadTransfer : 46|10@1- (2.0,0.0) [-1024.0|1022.0] "N" Vector__XXX
+ SG_ latLoadTransfer : 36|10@1- (2.0,0.0) [-1024.0|1022.0] "N" Vector__XXX
+ SG_ FL_Fz : 27|9@1+ (2.0,0.0) [0.0|1022.0] "N" Vector__XXX
+ SG_ FR_Fz : 18|9@1+ (2.0,0.0) [0.0|1022.0] "N" Vector__XXX
+ SG_ RL_Fz : 9|9@1+ (2.0,0.0) [0.0|1022.0] "N" Vector__XXX
+ SG_ RR_Fz : 0|9@1+ (2.0,0.0) [0.0|1022.0] "N" Vector__XXX
+
+BO_ 311 TC_FL: 8 Vector__XXX
+ SG_ TC_Torque_Limit : 50|12@1+ (0.01,0.0) [0.0|40.95] "" Vector__XXX
+ SG_ OverSlip_I : 38|12@1+ (0.01,0.0) [0.0|40.95] "Nm" Vector__XXX
+ SG_ OverSlip_P : 26|12@1+ (0.01,0.0) [0.0|40.95] "Nm" Vector__XXX
+ SG_ OverSlip_HeldTorque : 14|12@1+ (0.01,0.0) [0.0|40.95] "%" Vector__XXX
+ SG_ PreSlip_Modifier : 2|12@1+ (0.01,0.0) [0.0|40.95] "%" Vector__XXX
+ SG_ TC_FL_State : 0|2@1+ (1.0,0.0) [0.0|3.0] "" Vector__XXX
+
+BO_ 312 TC_FR: 8 Vector__XXX
+ SG_ TC_Torque_Limit : 50|12@1+ (0.01,0.0) [0.0|40.95] "" Vector__XXX
+ SG_ OverSlip_I : 38|12@1+ (0.01,0.0) [0.0|40.95] "Nm" Vector__XXX
+ SG_ OverSlip_P : 26|12@1+ (0.01,0.0) [0.0|40.95] "Nm" Vector__XXX
+ SG_ OverSlip_HeldTorque : 14|12@1+ (0.01,0.0) [0.0|40.95] "%" Vector__XXX
+ SG_ PreSlip_Modifier : 2|12@1+ (0.01,0.0) [0.0|40.95] "%" Vector__XXX
+ SG_ TC_FR_State : 0|2@1+ (1.0,0.0) [0.0|3.0] "" Vector__XXX
+
+BO_ 313 TC_RL: 8 Vector__XXX
+ SG_ TC_Torque_Limit : 50|12@1+ (0.01,0.0) [0.0|40.95] "" Vector__XXX
+ SG_ OverSlip_I : 38|12@1+ (0.01,0.0) [0.0|40.95] "Nm" Vector__XXX
+ SG_ OverSlip_P : 26|12@1+ (0.01,0.0) [0.0|40.95] "Nm" Vector__XXX
+ SG_ OverSlip_HeldTorque : 14|12@1+ (0.01,0.0) [0.0|40.95] "%" Vector__XXX
+ SG_ PreSlip_Modifier : 2|12@1+ (0.01,0.0) [0.0|40.95] "%" Vector__XXX
+ SG_ TC_RL_State : 0|2@1+ (1.0,0.0) [0.0|3.0] "" Vector__XXX
+
+BO_ 320 TC_RR: 8 Vector__XXX
+ SG_ TC_Torque_Limit : 50|12@1+ (0.01,0.0) [0.0|40.95] "" Vector__XXX
+ SG_ OverSlip_I : 38|12@1+ (0.01,0.0) [0.0|40.95] "Nm" Vector__XXX
+ SG_ OverSlip_P : 26|12@1+ (0.01,0.0) [0.0|40.95] "Nm" Vector__XXX
+ SG_ OverSlip_HeldTorque : 14|12@1+ (0.01,0.0) [0.0|40.95] "%" Vector__XXX
+ SG_ PreSlip_Modifier : 2|12@1+ (0.01,0.0) [0.0|40.95] "%" Vector__XXX
+ SG_ TC_RR_State : 0|2@1+ (1.0,0.0) [0.0|3.0] "" Vector__XXX
+
+BO_ 321 Model_Cell_Data: 8 Vector__XXX
+ SG_ Mean_OCV_Drift_Comp : 60|4@1+ (0.05,0.0) [0.0|0.75] "" Vector__XXX
+ SG_ Min_OCV_Drift_Comp : 56|4@1+ (0.05,0.0) [0.0|0.75] "" Vector__XXX
+ SG_ Measured_Charge_Resistance : 46|10@1+ (0.05,0.0) [0.0|51.150000000000006] "" Vector__XXX
+ SG_ Charge_Resitance : 36|10@1+ (0.05,0.0) [0.0|51.150000000000006] "" Vector__XXX
+ SG_ Measured_Discharge_Resistance : 26|10@1+ (0.05,0.0) [0.0|51.150000000000006] "" Vector__XXX
+ SG_ Discharge_Resistance : 16|10@1+ (0.05,0.0) [0.0|51.150000000000006] "" Vector__XXX
+ SG_ Mean_OCV : 8|8@1+ (0.01,2.5) [2.5|5.050000000000001] "" Vector__XXX
+ SG_ Min_OCV : 0|8@1+ (0.01,2.5) [2.5|5.050000000000001] "" Vector__XXX
+
+BO_ 322 Bicycle_Model: 8 Vector__XXX
+ SG_ intendedYawEstimate : 36|12@1- (0.1,0.0) [-204.8|204.70000000000002] "" Vector__XXX
+ SG_ yawDot : 24|12@1- (1.0,0.0) [-2048.0|2047.0] "" Vector__XXX
+ SG_ latVelocityEstimate : 12|12@1- (0.01,0.0) [-20.48|20.47] "" Vector__XXX
+ SG_ latVelocityDot : 0|12@1- (0.1,0.0) [-204.8|204.70000000000002] "" Vector__XXX
+
+BO_ 323 Mu_Estimation: 8 Vector__XXX
+ SG_ yawAySpeedDif : 50|6@1- (0.1,0.0) [-3.2|3.1] "m/s2" Vector__XXX
+ SG_ tireMuX : 40|10@1+ (0.01,0.0) [0.0|10.23] "" Vector__XXX
+ SG_ utilizedMUFL : 30|10@1+ (0.01,0.0) [0.0|10.23] "" Vector__XXX
+ SG_ utilizedMuFR : 20|10@1+ (0.01,0.0) [0.0|10.23] "" Vector__XXX
+ SG_ utilizedMuRL : 10|10@1+ (0.01,0.0) [0.0|10.23] "" Vector__XXX
+ SG_ utilizedMuRR : 0|10@1+ (0.01,0.0) [0.0|10.23] "" Vector__XXX
+
+BO_ 324 Veh_Status: 8 Vector__XXX
+ SG_ CellTempRise : 42|13@1+ (0.01,0.0) [0.0|81.91] "" Vector__XXX
+ SG_ ChargeEnergy : 28|14@1+ (0.001,0.0) [0.0|16.383] "kWh" Vector__XXX
+ SG_ DischargeEnergy : 14|14@1+ (0.001,0.0) [0.0|16.383] "kWh" Vector__XXX
+ SG_ NetEnergy : 0|14@1+ (0.0005,0.0) [0.0|8.1915] "kWh" Vector__XXX
+
+BO_ 325 PowerLimits: 8 Vector__XXX
+ SG_ Active_Efficiency : 51|11@1+ (0.001,0.0) [0.0|2.047] "" Vector__XXX
+ SG_ Endro_kWh_Err : 39|12@1+ (0.001,0.0) [0.0|4.095] "" Vector__XXX
+ SG_ kWh_Per_km_filt : 29|10@1+ (0.0005,0.0) [0.0|0.5115000000000001] "" Vector__XXX
+ SG_ PowerLim_RangeMd : 20|9@1+ (0.1,0.0) [0.0|51.1] "" Vector__XXX
+ SG_ FF_Endro_PowerLim : 10|10@1+ (0.1,0.0) [0.0|102.30000000000001] "" Vector__XXX
+ SG_ CellTemp_MinPower : 0|10@1+ (0.1,0.0) [0.0|102.30000000000001] "kW" Vector__XXX
+
+BO_ 373 calECU_CC_Parameters: 8 Vector__XXX
+ SG_ ptwc_CurCtrl_FBUnder_I_Gain : 28|14@1+ (0.01,0.0) [0.0|100.0] "" Vector__XXX
+ SG_ ptwc_CurCtrl_FBOver_I_Gain : 14|14@1+ (0.01,0.0) [0.0|100.0] "" Vector__XXX
+ SG_ ptwc_CurCtrl_FBOver_P_Gain : 0|14@1+ (0.01,0.0) [0.0|100.0] "" Vector__XXX
+
+BO_ 374 calECU_Fault_Parameters: 8 Vector__XXX
+ SG_ ptwc_brake_fault_psi : 0|14@1+ (0.1,0.0) [0.0|1638.3000000000002] "" Vector__XXX
+
+BO_ 375 calECU_General: 8 Vector__XXX
+ SG_ ptwc_Susp_Front_RollK : 39|17@1+ (0.1,0.0) [0.0|10000.0] "" Vector__XXX
+ SG_ ptwc_Enable_fuzzyVE : 38|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_RR_MC_Disable : 37|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_RL_MC_Disable : 36|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_FR_MC_Disable : 35|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_FL_MC_Disable : 34|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Enable_ABS : 33|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Enable_FW : 32|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Enable_TC : 31|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Enable_TV : 30|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Enable_Regen : 29|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Enable_LC : 28|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Enable_CC : 27|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Enable_PC : 26|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_TQ_Veh_Max : 16|10@1+ (0.1,0.0) [0.0|84.0] "" Vector__XXX
+ SG_ ptwc_TQ_Motor_Max : 8|8@1+ (0.1,0.0) [0.0|21.0] "" Vector__XXX
+
+BO_ 376 calECU_General_2: 8 Vector__XXX
+ SG_ ptwc_steeringAngleOffset : 41|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+ SG_ ptwc_apsA_offset : 29|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+ SG_ ptwc_apsA_gain : 17|12@1+ (1.0,0.0) [0.0|4095.0] "" Vector__XXX
+ SG_ ptwc_Susp_Real_RollK : 0|17@1+ (0.1,0.0) [0.0|10000.0] "" Vector__XXX
+
+BO_ 377 calECU_General_3: 8 Vector__XXX
+ SG_ ptwc_pump_enable : 58|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_MC_power : 57|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_rad_temp_limit : 46|11@1+ (0.1,0.0) [0.0|204.70000000000002] "" Vector__XXX
+ SG_ ptwc_pack_temp_limit : 35|11@1+ (0.1,0.0) [0.0|204.70000000000002] "" Vector__XXX
+ SG_ ptwc_Tire_TQ_Max_Base : 27|8@1+ (0.1,0.0) [0.0|25.5] "" Vector__XXX
+ SG_ ptwc_brake_enable_limit : 17|10@1+ (1.0,0.0) [0.0|1023.0] "" Vector__XXX
+ SG_ ptwc_steeringAngleGain : 0|17@1+ (0.05,0.0) [0.0|6553.55] "" Vector__XXX
+
+BO_ 384 calECU_General_4: 8 Vector__XXX
+ SG_ ptwc_vehMass : 14|13@1+ (0.1,0.0) [0.0|819.1] "" Vector__XXX
+ SG_ ptwc_vehInertia_zz : 0|14@1+ (0.01,0.0) [0.0|163.83] "" Vector__XXX
+
+BO_ 385 calECU_General_Maps: 8 Vector__XXX
+ SG_ ptwm_Custom_pedalMap_z : 0|7@1+ (0.01,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 386 calECU_HV_Parameters: 8 Vector__XXX
+ SG_ ptwc_DisChrg_ResitanceLearnGain : 51|10@1+ (0.0001,0.0) [0.0|0.1] "" Vector__XXX
+ SG_ ptwc_Chrg_ResitanceLearnGain : 41|10@1+ (0.0001,0.0) [0.0|0.1] "" Vector__XXX
+ SG_ ptwc_ResitanceLearnEnable : 40|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Charge_Peak_Max : 29|11@1+ (0.1,0.0) [0.0|200.0] "" Vector__XXX
+ SG_ ptwc_Charge_Cont_Max : 18|11@1+ (0.1,0.0) [0.0|204.70000000000002] "" Vector__XXX
+ SG_ ptwc_Power_Max : 0|18@1+ (1.0,0.0) [0.0|262143.0] "" Vector__XXX
+
+BO_ 387 calECU_HV_Parameters_2: 8 Vector__XXX
+ SG_ ptwc_HVEfficiencyGain : 0|7@1+ (0.01,0.5) [0.5|1.5] "" Vector__XXX
+
+BO_ 388 calECU_LC_Maps: 8 Vector__XXX
+ SG_ ptwm_LC_OL_Fz2Fx_z : 0|5@1+ (0.5,5.0) [5.0|21.0] "" Vector__XXX
+
+BO_ 389 calECU_LC_Parameters: 8 Vector__XXX
+ SG_ ptwc_LC_Surf_Mod : 44|8@1+ (0.01,0.0) [0.0|2.5] "" Vector__XXX
+ SG_ ptwc_LC_Des_Slip : 34|10@1+ (0.1,0.0) [0.0|100.0] "" Vector__XXX
+ SG_ ptwc_LC_Max_Duration : 28|6@1+ (0.1,0.0) [0.0|5.0] "" Vector__XXX
+ SG_ ptwc_LC_Mu_HardCode_Enable : 27|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_LC_Mu_HardCode : 19|8@1+ (0.01,0.0) [0.0|2.0] "" Vector__XXX
+ SG_ ptwc_LC_CL_OverSlip_Ki : 9|10@1+ (0.01,0.0) [0.0|10.0] "" Vector__XXX
+ SG_ ptwc_LC_CL_OverSlip_Kp : 2|7@1+ (0.1,0.0) [0.0|10.0] "" Vector__XXX
+ SG_ ptwc_LC_CL_Enable : 1|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_LC_OL_Mu_Enable : 0|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 390 calECU_Regen_Maps: 8 Vector__XXX
+ SG_ ptwm_DischrgResitance_z : 31|10@1+ (0.0001,0.0) [0.0|0.1] "" Vector__XXX
+ SG_ ptwm_ChrgResitance_z : 21|10@1+ (0.0001,0.0) [0.0|0.1] "" Vector__XXX
+ SG_ ptwm_Regen_CornerDerate_z : 14|7@1+ (0.01,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwm_Regen_BrakeTQPct_z : 7|7@1+ (0.01,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwm_Regen_OffPedalSpdAdj_z : 0|7@1+ (0.01,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 391 calECU_Regen_Parameters: 8 Vector__XXX
+ SG_ ptwc_Regen_Pulse_Curr : 45|12@1+ (0.1,0.0) [0.0|250.0] "" Vector__XXX
+ SG_ ptwc_Regen_BrakeTQIncLim : 35|10@1+ (0.1,0.0) [0.0|84.0] "" Vector__XXX
+ SG_ ptwc_Regen_BrakeTQTarget : 21|14@1+ (0.01,0.0) [0.0|84.0] "" Vector__XXX
+ SG_ ptwc_Regen_OffPedalMaxTQ : 7|14@1+ (0.01,0.0) [0.0|84.0] "" Vector__XXX
+ SG_ ptwc_Regen_OffPedalSpdAdj : 6|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_Regen_pedalAdjustment : 0|6@1+ (0.01,0.0) [0.0|0.5] "" Vector__XXX
+
+BO_ 392 calECU_Regen_Parameters_2: 8 Vector__XXX
+ SG_ ptwc_Regen_Pulse_Time : 9|9@1+ (0.01,0.0) [0.0|5.0] "" Vector__XXX
+ SG_ ptwc_Regen_Cont_Curr : 0|9@1+ (0.1,0.0) [0.0|50.0] "" Vector__XXX
+
+BO_ 393 calECU_TC_Maps: 8 Vector__XXX
+ SG_ ptwm_dyn_bias_rate_z : 40|15@1+ (0.01,-100.0) [-100.0|100.0] "" Vector__XXX
+ SG_ ptwm_tc_ramp_z : 25|15@1+ (1.0,0.0) [0.0|25000.0] "" Vector__XXX
+ SG_ ptwm_tc_z : 14|11@1+ (0.1,-10.0) [-10.0|100.0] "" Vector__XXX
+ SG_ ptwm_tc_accel_rate_z : 5|9@1+ (0.1,-15.0) [-15.0|15.0] "" Vector__XXX
+
+BO_ 400 calECU_TC_Parameters: 8 Vector__XXX
+ SG_ ptwc_tc_bias_match_enable : 61|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+
+BO_ 401 calECU_TC_Parameters_2: 8 Vector__XXX
+ SG_ ptwc_tc_p_gain : 37|17@1+ (0.01,-100.0) [-100.0|1000.0] "" Vector__XXX
+ SG_ ptwc_tc_pre_p_gain : 20|17@1+ (0.01,-100.0) [-100.0|1000.0] "" Vector__XXX
+ SG_ ptwc_tc_pre_slip : 5|15@1+ (0.01,-100.0) [-100.0|100.0] "" Vector__XXX
+ SG_ ptwc_tc_enable_speed : 0|5@1+ (1.0,0.0) [0.0|20.0] "" Vector__XXX
+
+BO_ 402 calECU_TC_Parameters_3: 8 Vector__XXX
+ SG_ ptwc_tc_decrease : 17|15@1+ (0.01,-84.0) [-84.0|84.0] "" Vector__XXX
+ SG_ ptwc_tc_i_gain : 0|17@1+ (0.01,-100.0) [-100.0|1000.0] "" Vector__XXX
+
+BO_ 403 calECU_TV_Maps: 8 Vector__XXX
+ SG_ ptwm_TV_FB_DriverYaw_z : 36|7@1+ (1.0,0.0) [0.0|100.0] "" Vector__XXX
+ SG_ ptwm_TV_MotLim_LatErr_z : 29|7@1+ (0.01,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwm_TV_MotLim_LonErr_z : 22|7@1+ (0.01,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwm_TV_FF_LatSplit_z : 10|12@1+ (0.01,0.0) [0.0|21.0] "" Vector__XXX
+ SG_ ptwm_TV_FF_LatSpdDerate_z : 0|10@1+ (0.1,0.0) [0.0|100.0] "" Vector__XXX
+
+BO_ 404 calECU_TV_Parameters: 8 Vector__XXX
+ SG_ ptwc_TV_FB_SlowIGain : 50|11@1+ (0.001,0.0) [0.0|2.0] "" Vector__XXX
+ SG_ ptwc_TV_FB_BasePGain : 36|14@1+ (0.01,0.0) [0.0|100.0] "" Vector__XXX
+ SG_ ptwc_TV_FB_YawController_En : 35|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_TV_ActiveMotorLimit_En : 34|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_TV_FB_YawSurfaceSat_En : 33|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_TV_FF_RegenLonSplitMode : 32|1@1+ (1.0,1.0) [1.0|3.0] "" Vector__XXX
+ SG_ ptwc_TV_FF_RegenStaticSplit : 25|7@1+ (0.01,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_TV_FF_Default_Split : 15|10@1+ (0.1,0.0) [0.0|100.0] "" Vector__XXX
+ SG_ ptwc_TV_FF_RegenStatSplitEnable : 14|1@1+ (1.0,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_TV_FF_RegenStatSplit : 7|7@1+ (0.01,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ ptwc_TV_FF_RearBiasPct : 0|7@1+ (0.01,0.0) [0.0|1.0] "" Vector__XXX
+
+
+
+
+
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+
+
+
+
+

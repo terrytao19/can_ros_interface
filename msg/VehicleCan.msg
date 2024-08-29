@@ -1,0 +1,11 @@
+Header header
+
+float64 AS_steer_ang
+float64 AMK_TargetTorque_FL
+float64 AMK_TargetTorque_FR
+float64 AMK_TargetTorque_RL
+float64 AMK_TargetTorque_RR
+
+bool res_switch
+bool res_button
+bool res_enabled
